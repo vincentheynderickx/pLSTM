@@ -43,8 +43,8 @@ def train_model(data_dir, output_dir, fname, ID_lst, cfg):
 if __name__ == "__main__":
 
     # directories
-    data_dir = '/root directory/data'
-    output_dir = '/root directory/results'
+    data_dir = 'data'
+    output_dir = 'results'
 
     # configutaitons dictionary
     cfg = {
