@@ -388,7 +388,7 @@ class pROM():
     def evaluateModel(self):
 
         # load model
-        model = keras.models.load_model('{}/LSTM{}.tf'.format(self.new_dir, self.fname))
+        model = keras.models.load_model('{}/LSTM{}.keras'.format(self.new_dir, self.fname))
         #model.summary()
 
         # evaluate train
@@ -413,7 +413,7 @@ class pROM():
     def testModel_seenData(self, Niter_tot=1, eps=0):
 
         # load model
-        model = keras.models.load_model('{}/LSTM{}.tf'.format(self.new_dir, self.fname))
+        model = keras.models.load_model('{}/LSTM{}.keras'.format(self.new_dir, self.fname))
         #model.summary()
 
         # start-end indices for self.X and self.Y for each case (seen)
@@ -499,7 +499,7 @@ class pROM():
     def testModel_UnseenData(self, Niter_tot=1, eps=0):
 
         # load model
-        model = keras.models.load_model('{}/LSTM{}.tf'.format(self.new_dir, self.fname))
+        model = keras.models.load_model('{}/LSTM{}.keras'.format(self.new_dir, self.fname))
         #model.summary()
 
         # start-end indices for self.X and self.Y for each case (unseen)
@@ -590,8 +590,8 @@ class pROM():
         # load files
         scaler_features = joblib.load('{}/scaler_feature_{}.gz'.format(self.new_dir, self.fname))
         scaler_parameters = joblib.load('{}/scaler_parameters.gz'.format(self.new_dir))
-        ICmodel = keras.models.load_model('{}/IC{}.tf'.format(self.new_dir, self.fname))
-        model = keras.models.load_model('{}/LSTM{}.tf'.format(self.new_dir, self.fname))
+        ICmodel = keras.models.load_model('{}/IC{}.keras'.format(self.new_dir, self.fname))
+        model = keras.models.load_model('{}/LSTM{}.keras'.format(self.new_dir, self.fname))
 
         # build history of input parameters  
         if S2_input == None:

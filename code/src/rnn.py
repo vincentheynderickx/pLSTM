@@ -73,7 +73,7 @@ class RNN():
                                 callbacks=early_stopping
                                 )
 
-        self.model.save("{}/LSTM{}.tf".format(setup.new_dir, setup.fname))
+        self.model.save("{}/LSTM{}.keras".format(setup.new_dir, setup.fname))
 
         # plot
         plotLoss(history=history, fname=[setup.new_dir, "Model{}".format(setup.fname)])
@@ -221,7 +221,7 @@ class pRNN():
                                 )
 
         # save model
-        self.model.save("{}/IC{}.tf".format(setup.new_dir, setup.fname))
+        self.model.save("{}/IC{}.keras".format(setup.new_dir, setup.fname))
 
         # plot
         plotLoss(history=history, fname=[setup.new_dir, "IC{}".format(setup.fname)])
@@ -272,7 +272,7 @@ class pRNN():
             plotLoss(history=history, fname=[setup.new_dir, "Model{}".format(setup.fname)])
 
         # save model
-        self.model.save("{}/LSTM{}.tf".format(setup.new_dir, setup.fname))
+        self.model.save("{}/LSTM{}.keras".format(setup.new_dir, setup.fname))
 
         return
 
